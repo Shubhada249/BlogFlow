@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'Times New Roman';
+  box-sizing: border-box
+}
+
+
+.homePage {
+  display: flex;
+  flex-wrap: wrap; /* Allows posts to wrap to the next row  */
+  justify-content: space-between; /* Adjust as needed (e.g., space-around, space-evenly) */
+  background-color: rgb(227, 246, 253);
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.post {
+  /*flex: control the behavior of flex items within a flex container  
+  //flex-grow (0): Since it's set to 0, the item won't grow beyond its initial size.
+  flex-shrink (0): This item can shrink if necessary.
+  flex-basis (calc(30% - 20px)): each post/flex-item to take up 30% of the container's width but leave a 20-pixel gap between them*/
+  flex: 0 0 calc(33% - 20px); 
+
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.205);
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.post .post-txt
+{
+  height: 310px;
+  overflow: auto;
+}
+
+.post .title-trash
+{
+  display: flex;
+  justify-content: space-between;
+}
+.post-title h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+  text-shadow:1.5px 2.2px 3px rgba(0, 0, 0, 0.297);;
+}
+
+.deletePost button
+{
+  border: 1px solid grey;
+  padding: 4px;
+  cursor: pointer;
+}
+
